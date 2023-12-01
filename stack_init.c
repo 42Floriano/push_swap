@@ -6,7 +6,7 @@
 /*   By: albertini <albertini@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 15:28:41 by falberti          #+#    #+#             */
-/*   Updated: 2023/12/01 16:13:46 by albertini        ###   ########.fr       */
+/*   Updated: 2023/12/02 00:21:15 by albertini        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ void	stack_init(t_stack_node **a, char **list)
 
 
 // Main tester for nodes
-int	main(void)
+/* int	main(void)
 {
 	t_stack_node	*a;
 
@@ -68,4 +68,4 @@ int	main(void)
 		a = a->next;
 	}
 	return (42);
-}
+} */
