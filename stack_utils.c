@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack_utils.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
+/*   By: albertini <albertini@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 16:46:08 by falberti          #+#    #+#             */
-/*   Updated: 2023/11/29 17:08:56 by falberti         ###   ########.fr       */
+/*   Updated: 2023/12/01 19:11:20 by albertini        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,17 @@ void	append_node(t_stack_node **stack, int nbr)
 		last_node->next = node;
 		node->prev = last_node;
 	}
+}
+
+int	stack_len(t_stack_node *list)
+{
+	int count;
+
+	count = 0;
+	while(list)
+	{
+		count++;
+		list = list->next;
+	}
+	return (count);
 }

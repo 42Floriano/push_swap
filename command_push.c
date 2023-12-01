@@ -1,31 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error_checkers.c                                   :+:      :+:    :+:   */
+/*   command_push.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: albertini <albertini@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/29 16:46:32 by falberti          #+#    #+#             */
-/*   Updated: 2023/12/01 19:22:42 by albertini        ###   ########.fr       */
+/*   Created: 2023/12/01 16:24:52 by albertini         #+#    #+#             */
+/*   Updated: 2023/12/01 17:50:14 by albertini        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	error_free(t_stack_node **a, char **list)
+static void  push(t_stack_node **dest, t_stack_node **src)
 {
-	exit(2);
-}
-
-int	int_repeat(t_stack_node *stack, int nbr)
-{
-	if (stack == NULL)
-		return (0);
-	while (stack)
-	{
-		if (stack->value == nbr)
-			return (1);
-		stack = stack->next;
-	}
-	return (0);
+  t_stack_node *tmp;
+  if (src == NULL)
+    return ;
+  tmp = src[0];
+  src[0] = src[0]->next;
+  if(src[0])
+    src[0]->prev = NULL;
+  tmp->prev = NULL;
+  if (dest[0] == NULL)
+  {
+    dest[0] = tmp;
+    tmp->next = NULL;
+  }
+  else 
+  {
+    
+    tmp->next = dest[0];
+    dest[0]->prev = tmp;
+    //tmp->next->prev = tmp;
+    dest[0] = tmp;
+  }
 }

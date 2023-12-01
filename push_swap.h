@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
+/*   By: albertini <albertini@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 11:28:09 by falberti          #+#    #+#             */
-/*   Updated: 2023/11/29 17:08:57 by falberti         ###   ########.fr       */
+/*   Updated: 2023/12/01 19:22:44 by albertini        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,14 @@ void				stack_init(t_stack_node **a, char **list);
 // stack_utils
 t_stack_node		*find_last_node(t_stack_node *stack);
 void				append_node(t_stack_node **stack, int nbr);
+int					stack_len(t_stack_node *list);
 
 // error_checkers
 void				error_free(t_stack_node **a, char **list);
 int					int_repeat(t_stack_node *stack, int nbr);
 
+// freerers
+void				free_list(char **list);
+
 #endif
+
