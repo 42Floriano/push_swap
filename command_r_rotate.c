@@ -3,18 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   command_r_rotate.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albertini <albertini@student.42.fr>        +#+  +:+       +#+        */
+/*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 16:25:56 by albertini         #+#    #+#             */
-/*   Updated: 2023/12/02 00:19:58 by albertini        ###   ########.fr       */
+/*   Updated: 2024/01/10 16:45:39 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void  r_rotate(t_stack_node **stack)
+static  void r_rotate(t_stack_node **stack)
 {
     t_stack_node *last_node;
+
     if (stack == NULL || *stack == NULL || stack_len(*stack) == 1)
         return ;
     last_node = find_last_node(*stack);
