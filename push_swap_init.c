@@ -6,7 +6,7 @@
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 14:41:46 by falberti          #+#    #+#             */
-/*   Updated: 2024/01/16 16:11:05 by falberti         ###   ########.fr       */
+/*   Updated: 2024/01/16 16:37:29 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,15 +64,50 @@ void	set_price(t_stack_node *a, t_stack_node *b)
 
 void	set_current_position(t_stack_node *stack)
 {
+	int	i;
+	int	middlestack;
+
+	i = 0;
+	if (stack == NULL)
+		return ;
+	middlestack = stack_len(stack) / 2;
+	while (stack)
+	{
+		stack->current_position = i;
+		if (i <= middlestack)
+			stack->above_median = true;
+		else
+			stack->above_median = false;
+		stack = stack->next;
+		i++;
+	}
 	return ;
 }
 
 void	set_cheapest(t_stack_node *b)
 {
+	t_stack_node	*cheapest;
+	long			cheapest_value;
+
+	if (b == NULL)
+		return ;
+	while (b)
+	{
+		if (b->push_price < cheapest_value)
+		{
+			cheapest = b;
+			cheapest_value = b->push_price;
+		}
+		b = b->next;
+	}
 	return ;
 }
 
 void	init_nodes(t_stack_node *a, t_stack_node *b)
 {
+	set_current_position(a);
+	set_current_position(b);
+	set_target_node(a, b);
+	set_cheapest(b);
 	return ;
 }
