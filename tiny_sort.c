@@ -6,7 +6,7 @@
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/20 13:39:57 by falberti          #+#    #+#             */
-/*   Updated: 2024/01/09 16:08:03 by falberti         ###   ########.fr       */
+/*   Updated: 2024/01/15 17:41:14 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,6 @@ void 	handle_five(t_stack_node **a, t_stack_node **b)
 {
 	while (stack_len(*a) > 3)
 	{
-		
+	
 	}
 }

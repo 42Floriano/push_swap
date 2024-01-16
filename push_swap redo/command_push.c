@@ -6,7 +6,7 @@
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 16:01:28 by falberti          #+#    #+#             */
-/*   Updated: 2024/01/15 17:55:50 by falberti         ###   ########.fr       */
+/*   Updated: 2024/01/15 16:49:32 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,24 @@
 
 static	void	push(t_stack_node **dest, t_stack_node **src)
 {
-	t_stack_node	*node_to_push;
+	t_stack_node	*tmp;
 
 	if (src[0] == NULL)
 		return ;
-	node_to_push = src[0];
+	tmp = src[0];
 	src[0] = src[0]->next;
 	if (*src)
 		src[0]->prev = NULL;
 	if (dest[0] == NULL)
 	{
-	dest[0] = node_to_push;
+	dest[0] = tmp;
 	dest[0]->next = NULL;
 	}
 	else
 	{
-	node_to_push->next = dest[0];
-	dest[0]->prev = node_to_push;
-	dest[0] = node_to_push;
+	tmp->next = dest[0];
+	dest[0]->prev = tmp;
+	dest[0] = tmp;
 	}
 	return ;
 }
