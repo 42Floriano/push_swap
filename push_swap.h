@@ -6,7 +6,7 @@
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 11:28:09 by falberti          #+#    #+#             */
-/*   Updated: 2024/01/16 13:55:11 by falberti         ###   ########.fr       */
+/*   Updated: 2024/01/16 16:07:45 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ typedef struct s_stack_node
 {
 	int					value;
 	int					current_position;
-	int					final_index;
 	int					push_price;
 	bool				above_median;
 	bool				cheapest;
@@ -68,5 +67,11 @@ void				rrr(t_stack_node **stacka, t_stack_node **stackb);
 // tiny sort
 void				tiny_sort(t_stack_node **a);
 int					stack_sorted(t_stack_node *stack);
+
+// push swap init
+void				set_price(t_stack_node *a, t_stack_node *b);
+void				set_current_position(t_stack_node *stack);
+void				set_cheapest(t_stack_node *b);
+void				init_nodes(t_stack_node *a, t_stack_node *b);
 
 #endif
