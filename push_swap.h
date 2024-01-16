@@ -6,7 +6,7 @@
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 11:28:09 by falberti          #+#    #+#             */
-/*   Updated: 2024/01/16 16:07:45 by falberti         ###   ########.fr       */
+/*   Updated: 2024/01/16 16:11:07 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,5 +73,8 @@ void				set_price(t_stack_node *a, t_stack_node *b);
 void				set_current_position(t_stack_node *stack);
 void				set_cheapest(t_stack_node *b);
 void				init_nodes(t_stack_node *a, t_stack_node *b);
+
+// push swap command
+
 
 #endif
