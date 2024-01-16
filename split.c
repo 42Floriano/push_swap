@@ -6,7 +6,7 @@
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 15:15:49 by falberti          #+#    #+#             */
-/*   Updated: 2024/01/11 15:36:25 by falberti         ###   ########.fr       */
+/*   Updated: 2024/01/16 13:58:42 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,6 @@ char	**split(char *str, char sep)
 	i = 0;
 	while (len-- > 0)
 		list[i++] = get_next_word(str, sep);
-	list[i] = 0;
+	list[i] = NULL;
 	return (list);
 }

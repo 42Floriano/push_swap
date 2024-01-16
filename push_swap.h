@@ -6,7 +6,7 @@
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 11:28:09 by falberti          #+#    #+#             */
-/*   Updated: 2024/01/11 17:12:00 by falberti         ###   ########.fr       */
+/*   Updated: 2024/01/16 13:55:11 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ void				node_init(t_stack_node **a, char **list);
 // stack_utils
 t_stack_node		*find_last_node(t_stack_node *stack);
 void				append_node(t_stack_node **stack, int nbr);
+t_stack_node		*find_smallest(t_stack_node *stack);
 int					stack_len(t_stack_node *list);
 
 // error_checkers
@@ -66,5 +67,6 @@ void				rrr(t_stack_node **stacka, t_stack_node **stackb);
 
 // tiny sort
 void				tiny_sort(t_stack_node **a);
+int					stack_sorted(t_stack_node *stack);
 
 #endif

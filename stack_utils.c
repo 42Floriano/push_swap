@@ -5,20 +5,20 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/29 16:46:08 by falberti          #+#    #+#             */
-/*   Updated: 2024/01/09 16:00:21 by falberti         ###   ########.fr       */
+/*   Created: 2024/01/10 14:57:59 by falberti          #+#    #+#             */
+/*   Updated: 2024/01/16 13:53:56 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_stack_node	*find_last_node(t_stack_node *stack)
+t_stack_node	*find_last_node(t_stack_node *head)
 {
-	if (stack == NULL)
+	if (head == NULL)
 		return (NULL);
-	while (stack->next)
-		stack = stack->next;
-	return (stack);
+	while (head->next)
+		head = head->next;
+	return (head);
 }
 
 void	append_node(t_stack_node **stack, int nbr)
@@ -35,8 +35,8 @@ void	append_node(t_stack_node **stack, int nbr)
 	node->value = nbr;
 	if (*stack == NULL)
 	{
-		*stack = node;
 		node->prev = NULL;
+		*stack = node;
 	}
 	else
 	{
@@ -46,6 +46,26 @@ void	append_node(t_stack_node **stack, int nbr)
 	}
 }
 
+t_stack_node	*find_smallest(t_stack_node *stack)
+{
+	t_stack_node	*smallest_node;
+	long			smallest;
+
+	if (stack == NULL)
+		return (NULL);
+	smallest = LONG_MAX;
+	while (stack)
+	{
+		if (stack->value < smallest)
+		{
+			smallest = stack->value;
+			smallest_node = stack;
+		}
+		stack = stack->next;
+	}
+	return (smallest_node);
+}
+
 int	stack_len(t_stack_node *list)
 {
 	int	count;
@@ -53,8 +73,8 @@ int	stack_len(t_stack_node *list)
 	count = 0;
 	while (list)
 	{
-		count++;
 		list = list->next;
+		count++;
 	}
 	return (count);
 }

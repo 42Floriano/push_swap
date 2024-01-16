@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/29 15:28:41 by falberti          #+#    #+#             */
-/*   Updated: 2024/01/11 17:15:32 by falberti         ###   ########.fr       */
+/*   Created: 2024/01/10 13:53:30 by falberti          #+#    #+#             */
+/*   Updated: 2024/01/16 13:58:21 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ void	node_init(t_stack_node **a, char **list)
 	while (list[i])
 	{
 		if (error_syntax(list[i]))
+			error_free(a, list);
 		nbr = ft_atol(list[i]);
 		if (nbr > INT_MAX || nbr < INT_MIN)
 			error_free(a, list);
@@ -54,19 +55,3 @@ void	node_init(t_stack_node **a, char **list)
 	free_list(list);
 	return ;
 }
-
-// Main tester for nodes
-/* int	main(void)
-{
-	t_stack_node	*a;
-
-	a = NULL;
-	char *v[5] = {v[0]= "42", v[1]= "100", v[2]= "-124", v[3]= NULL};
-	stack_init(&a, v);
-	while (a != NULL)
-	{
-		printf("%d\n", a->value);
-		a = a->next;
-	}
-	return (42);
-} */
