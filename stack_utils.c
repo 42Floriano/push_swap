@@ -6,7 +6,7 @@
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 14:57:59 by falberti          #+#    #+#             */
-/*   Updated: 2024/01/16 13:53:56 by falberti         ###   ########.fr       */
+/*   Updated: 2024/01/17 16:18:52 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,19 @@ void	append_node(t_stack_node **stack, int nbr)
 		last_node->next = node;
 		node->prev = last_node;
 	}
+}
+
+t_stack_node	*return_cheapest(t_stack_node *stack)
+{
+	if (stack == NULL)
+		return (NULL);
+	while (stack)
+	{
+		if (stack->cheapest)
+			return (stack);
+		stack = stack->next;
+	}
+	return (cheapest);
 }
 
 t_stack_node	*find_smallest(t_stack_node *stack)
