@@ -6,7 +6,7 @@
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 13:07:32 by falberti          #+#    #+#             */
-/*   Updated: 2024/01/16 13:59:25 by falberti         ###   ########.fr       */
+/*   Updated: 2024/01/17 15:37:59 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,4 +56,15 @@ static t_stack_node	*find_highest(t_stack_node *stack)
 		stack = stack->next;
 	}
 	return (highest_node);
+}
+
+void	handle_five(t_stack_node **a, t_stack_node **b)
+{
+	while (stack_len(a[0]) > 3)
+	{
+		init_nodes(a[0], b[0]);
+		finish_rotation(a, find_smallest(a[0]), 'a');
+		pb(b, a);
+	}
+	return ;
 }

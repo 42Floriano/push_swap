@@ -6,7 +6,7 @@
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 14:41:46 by falberti          #+#    #+#             */
-/*   Updated: 2024/01/16 16:37:29 by falberti         ###   ########.fr       */
+/*   Updated: 2024/01/17 15:39:20 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,6 +100,7 @@ void	set_cheapest(t_stack_node *b)
 		}
 		b = b->next;
 	}
+	cheapest_value->cheapest = true;
 	return ;
 }
 

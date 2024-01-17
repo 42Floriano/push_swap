@@ -6,7 +6,7 @@
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 11:28:09 by falberti          #+#    #+#             */
-/*   Updated: 2024/01/16 16:11:07 by falberti         ###   ########.fr       */
+/*   Updated: 2024/01/17 16:12:35 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,7 @@ void				rrr(t_stack_node **stacka, t_stack_node **stackb);
 // tiny sort
 void				tiny_sort(t_stack_node **a);
 int					stack_sorted(t_stack_node *stack);
+void				handle_five(t_stack_node **a, t_stack_node **b);
 
 // push swap init
 void				set_price(t_stack_node *a, t_stack_node *b);
@@ -75,6 +76,7 @@ void				set_cheapest(t_stack_node *b);
 void				init_nodes(t_stack_node *a, t_stack_node *b);
 
 // push swap command
-
+void				push_swap(t_stack_node **a, t_stack_node **b);
+void				finish_rotation(t_stack_node **s, t_stack_node *n, char c);
 
 #endif
