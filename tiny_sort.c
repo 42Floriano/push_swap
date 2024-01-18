@@ -6,7 +6,7 @@
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 13:07:32 by falberti          #+#    #+#             */
-/*   Updated: 2024/01/18 15:40:13 by falberti         ###   ########.fr       */
+/*   Updated: 2024/01/18 16:39:22 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,23 +23,6 @@ int	stack_sorted(t_stack_node *stack)
 		stack = stack->next;
 	}
 	return (1);
-}
-
-/*
- * tiny_sort sorts stack of 3 elements.
- * Finds the highest node then sorts the stacks
-*/
-void	tiny_sort(t_stack_node **a)
-{
-	t_stack_node	*highest_node;
-
-	highest_node = find_highest(*a);
-	if (a[0] == highest_node)
-		ra(a);
-	else if (a[0]->next == highest_node)
-		rra(a);
-	if (a[0]->value > a[0]->next->value)
-		sa(a);
 }
 
 static t_stack_node	*find_highest(t_stack_node *stack)
@@ -60,6 +43,23 @@ static t_stack_node	*find_highest(t_stack_node *stack)
 		stack = stack->next;
 	}
 	return (highest_node);
+}
+
+/*
+ * tiny_sort sorts stack of 3 elements.
+ * Finds the highest node then sorts the stacks
+*/
+void	tiny_sort(t_stack_node **a)
+{
+	t_stack_node	*highest_node;
+
+	highest_node = find_highest(*a);
+	if (a[0] == highest_node)
+		ra(a);
+	else if (a[0]->next == highest_node)
+		rra(a);
+	if (a[0]->value > a[0]->next->value)
+		sa(a);
 }
 
 /*

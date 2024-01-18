@@ -6,7 +6,7 @@
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 15:15:49 by falberti          #+#    #+#             */
-/*   Updated: 2024/01/18 13:43:39 by falberti         ###   ########.fr       */
+/*   Updated: 2024/01/18 16:37:05 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,6 @@ char	**split(char *str, char sep)
 	int		i;
 	int		len;
 	char	**list;
-	char	*new;
 
 	len = count_word(str, sep);
 	list = malloc(sizeof(list) * len + 1);
