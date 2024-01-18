@@ -6,7 +6,7 @@
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 15:55:01 by falberti          #+#    #+#             */
-/*   Updated: 2024/01/18 14:15:51 by falberti         ###   ########.fr       */
+/*   Updated: 2024/01/18 16:27:24 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ static	void	reverse_rotate_both(t_stack_node **a, t_stack_node **b,
 	return ;
 }
 
+// This is the algorithm moving the nodes depending of 
+// position in the stack and their cost.
 static	void	move_nodes(t_stack_node **a, t_stack_node **b)
 {
 	t_stack_node	*cheapest_node;
@@ -50,6 +52,8 @@ static	void	move_nodes(t_stack_node **a, t_stack_node **b)
 	return ;
 }
 
+// Finishes rotation till the n stack (cheapest) node is at the top
+// of the define stack.
 void	finish_rotation(t_stack_node **s, t_stack_node *n, char c)
 {
 	while (s[0] != n)
@@ -72,6 +76,7 @@ void	finish_rotation(t_stack_node **s, t_stack_node *n, char c)
 	return ;
 }
 
+// The function push_swap that handles 4 and more nodes.
 void	push_swap(t_stack_node **a, t_stack_node **b)
 {
 	t_stack_node	*smallest;

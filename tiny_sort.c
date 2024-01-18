@@ -6,7 +6,7 @@
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 13:07:32 by falberti          #+#    #+#             */
-/*   Updated: 2024/01/18 14:42:51 by falberti         ###   ########.fr       */
+/*   Updated: 2024/01/18 15:40:13 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ static t_stack_node	*find_highest(t_stack_node *stack)
 
 /*
  * Handle_five sorts the  of 5 elements.
- * Finds the highest node then sorts the stacks
+ * Pre-sorts stack a and pushes 2 nodes to stack b
 */
 void	handle_five(t_stack_node **a, t_stack_node **b)
 {
