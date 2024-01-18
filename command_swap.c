@@ -6,12 +6,14 @@
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 16:25:48 by falberti          #+#    #+#             */
-/*   Updated: 2024/01/15 17:55:03 by falberti         ###   ########.fr       */
+/*   Updated: 2024/01/18 13:40:14 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
+/*
+* Swaps the two top nodes of the stack
+*/
 static	void	swap(t_stack_node **stack)
 {
 	t_stack_node	*tmp;

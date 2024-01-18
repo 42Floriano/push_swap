@@ -6,12 +6,13 @@
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 14:41:46 by falberti          #+#    #+#             */
-/*   Updated: 2024/01/17 15:39:20 by falberti         ###   ########.fr       */
+/*   Updated: 2024/01/18 14:42:48 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+// Sets the best A target for each B node
 static	void	set_target_node(t_stack_node *a, t_stack_node *b)
 {
 	t_stack_node	*current_a;
@@ -62,6 +63,7 @@ void	set_price(t_stack_node *a, t_stack_node *b)
 	return ;
 }
 
+// Set the position of the node and if the node is above median or bellow
 void	set_current_position(t_stack_node *stack)
 {
 	int	i;
@@ -91,6 +93,7 @@ void	set_cheapest(t_stack_node *b)
 
 	if (b == NULL)
 		return ;
+	cheapest_value = LONG_MAX;
 	while (b)
 	{
 		if (b->push_price < cheapest_value)
@@ -100,7 +103,7 @@ void	set_cheapest(t_stack_node *b)
 		}
 		b = b->next;
 	}
-	cheapest_value->cheapest = true;
+	cheapest->cheapest = true;
 	return ;
 }
 
@@ -109,6 +112,7 @@ void	init_nodes(t_stack_node *a, t_stack_node *b)
 	set_current_position(a);
 	set_current_position(b);
 	set_target_node(a, b);
+	set_price(a, b);
 	set_cheapest(b);
 	return ;
 }

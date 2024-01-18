@@ -6,12 +6,15 @@
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 17:40:13 by falberti          #+#    #+#             */
-/*   Updated: 2024/01/16 13:58:55 by falberti         ###   ########.fr       */
+/*   Updated: 2024/01/18 13:42:53 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+/*
+* Takes the last node of the stack and appends it at the beginning of the stack
+*/
 static	void	r_rotate(t_stack_node **stack)
 {
 	t_stack_node	*last_node;

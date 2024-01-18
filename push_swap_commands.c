@@ -6,7 +6,7 @@
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 15:55:01 by falberti          #+#    #+#             */
-/*   Updated: 2024/01/17 16:21:28 by falberti         ###   ########.fr       */
+/*   Updated: 2024/01/18 14:15:51 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ static	void	move_nodes(t_stack_node **a, t_stack_node **b)
 	return ;
 }
 
-void	finish_rotation(t_stack_node **s, t_stack_node *n, char c);
+void	finish_rotation(t_stack_node **s, t_stack_node *n, char c)
 {
 	while (s[0] != n)
 	{
@@ -94,7 +94,7 @@ void	push_swap(t_stack_node **a, t_stack_node **b)
 	set_current_position(a[0]);
 	smallest = find_smallest(a[0]);
 	if (smallest->above_median)
-		while (a[0] !+ smallest)
+		while (a[0] != smallest)
 			ra(a);
 	else
 		while (a[0] != smallest)

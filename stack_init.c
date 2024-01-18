@@ -6,12 +6,13 @@
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 13:53:30 by falberti          #+#    #+#             */
-/*   Updated: 2024/01/16 13:58:21 by falberti         ###   ########.fr       */
+/*   Updated: 2024/01/18 13:44:03 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+//Converts string into long
 static	long	ft_atol(char *str)
 {
 	long	nbr;
@@ -33,7 +34,13 @@ static	long	ft_atol(char *str)
 	return (nbr * neg);
 }
 
-void	node_init(t_stack_node **a, char **list)
+/*
+ * Recieves a list strings and linked list 
+ * Converts each string into a long then stores it into the node
+ * Free the **list
+*/
+
+void	stack_init(t_stack_node **a, char **list)
 {
 	long	nbr;
 	int		i;

@@ -6,7 +6,7 @@
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 14:57:59 by falberti          #+#    #+#             */
-/*   Updated: 2024/01/17 16:18:52 by falberti         ###   ########.fr       */
+/*   Updated: 2024/01/18 13:43:56 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,11 @@ t_stack_node	*find_last_node(t_stack_node *head)
 	return (head);
 }
 
+/*
+ * Recieve an int and the stack
+ * Stores the nbr into and a node the check if there is a node in stack. 
+ * Add the node at the begining of the stack ot appends it at the end.
+*/
 void	append_node(t_stack_node **stack, int nbr)
 {
 	t_stack_node	*node;
@@ -56,7 +61,6 @@ t_stack_node	*return_cheapest(t_stack_node *stack)
 			return (stack);
 		stack = stack->next;
 	}
-	return (cheapest);
 }
 
 t_stack_node	*find_smallest(t_stack_node *stack)

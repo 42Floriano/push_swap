@@ -6,7 +6,7 @@
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 11:28:09 by falberti          #+#    #+#             */
-/*   Updated: 2024/01/17 16:19:58 by falberti         ###   ########.fr       */
+/*   Updated: 2024/01/18 13:44:01 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ typedef struct s_stack_node
 char				**split(char *str, char sep);
 
 // stack_init
-void				node_init(t_stack_node **a, char **list);
+void				stack_init(t_stack_node **a, char **list);
 
 // stack_utils
 t_stack_node		*find_last_node(t_stack_node *stack);

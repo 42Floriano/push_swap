@@ -6,12 +6,15 @@
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 16:01:28 by falberti          #+#    #+#             */
-/*   Updated: 2024/01/16 13:58:27 by falberti         ###   ########.fr       */
+/*   Updated: 2024/01/18 14:05:13 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+/*
+* Pushes the first node from src to the top of dest
+*/
 static	void	push(t_stack_node **dest, t_stack_node **src)
 {
 	t_stack_node	*node_to_push;
@@ -53,28 +56,3 @@ void	pb(t_stack_node **stackdestb, t_stack_node **stacksrca)
 	write(1, "pb\n", 3);
 	return ;
 }
-
-// Main to test it
-
-/* int main() {
-  
-  t_stack_node *a;
-  t_stack_node *b;
-  
-  b = malloc(sizeof(t_stack_node) +1);
-  b->value = 555;
-  b->prev = NULL;
-  b->next = NULL;
-  a = malloc(sizeof(t_stack_node) +1);
-  a->next = malloc(sizeof(t_stack_node) +1);
-  a->next->next = malloc(sizeof(t_stack_node) +1);
-  a->value = 12;
-  a->prev = NULL;
-  a->next->value = -12;
-  a->next->prev = a;
-  a->next->next->value = 100;
-  a->next->next->next = NULL;
-  a->next->next->prev = a->next;
-  push(&b, &a);
-  return (0);
-} */

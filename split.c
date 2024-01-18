@@ -6,7 +6,7 @@
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 15:15:49 by falberti          #+#    #+#             */
-/*   Updated: 2024/01/16 13:58:42 by falberti         ###   ########.fr       */
+/*   Updated: 2024/01/18 13:43:39 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,11 @@ static char	*get_next_word(char *str, char sep)
 	return (next_word);
 }
 
+/*
+ * Recieve a string and a char seperator
+ * Split the string using the seperator recieved into a list of string.
+ * Returns the **list
+*/
 char	**split(char *str, char sep)
 {
 	int		i;
