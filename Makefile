@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: falberti <falberti@student.42.fr>          +#+  +:+       +#+         #
+#    By: albertini <albertini@student.42.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/18 16:30:56 by falberti          #+#    #+#              #
-#    Updated: 2024/01/18 16:35:32 by falberti         ###   ########.fr        #
+#    Updated: 2024/01/19 01:25:36 by albertini        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,6 +24,7 @@ FILES = push_swap_init\
 					stack_init\
 					stack_utils\
 					tiny_sort\
+					str_join\
 
 
 HEADER = push_swap.h\

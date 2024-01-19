@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
+/*   By: albertini <albertini@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 11:28:09 by falberti          #+#    #+#             */
-/*   Updated: 2024/01/18 13:44:01 by falberti         ###   ########.fr       */
+/*   Updated: 2024/01/19 01:24:52 by albertini        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,5 +79,8 @@ void				init_nodes(t_stack_node *a, t_stack_node *b);
 // push swap command
 void				push_swap(t_stack_node **a, t_stack_node **b);
 void				finish_rotation(t_stack_node **s, t_stack_node *n, char c);
+
+// str join
+char				*str_join(char **lst);
 
 #endif
