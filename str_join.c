@@ -6,7 +6,7 @@
 /*   By: albertini <albertini@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 00:45:33 by albertini         #+#    #+#             */
-/*   Updated: 2024/01/19 01:26:00 by albertini        ###   ########.fr       */
+/*   Updated: 2024/01/19 12:05:13 by albertini        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,11 @@ char    *str_join(char **lst)
     len = 0;
     while (lst[x])
     {
+        if (!lst[x][0])
+        {
+            free(str);
+            mini_error_free();   
+        }
         y = 0;
         while (lst[x][y])
             str[len++] = lst[x][y++];

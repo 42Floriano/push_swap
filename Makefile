@@ -6,7 +6,7 @@
 #    By: albertini <albertini@student.42.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/18 16:30:56 by falberti          #+#    #+#              #
-#    Updated: 2024/01/19 01:25:36 by albertini        ###   ########.fr        #
+#    Updated: 2024/01/19 11:16:41 by albertini        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,7 @@ OFILES = $(addsuffix .o, $(FILES))
 ####################################################################
 ## Varguments
 CC = gcc
-CFLAGS = -Werror -Wextra -Wall -I $(HEADER)
+CFLAGS = -g -Werror -Wextra -Wall -I $(HEADER)
 NAME = push_swap
 
 #####################################################################

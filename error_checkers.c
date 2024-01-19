@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   error_checkers.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
+/*   By: albertini <albertini@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 14:07:16 by falberti          #+#    #+#             */
-/*   Updated: 2024/01/11 17:10:50 by falberti         ###   ########.fr       */
+/*   Updated: 2024/01/19 12:03:52 by albertini        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,12 @@ void	error_free(t_stack_node **a, char **list)
 {
 	free_stack(a);
 	free_list(list);
+	write(2, "Error/n", 6);
+	exit(1);
+}
+
+void	mini_error_free()
+{
 	write(2, "Error/n", 6);
 	exit(1);
 }

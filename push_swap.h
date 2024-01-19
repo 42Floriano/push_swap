@@ -6,7 +6,7 @@
 /*   By: albertini <albertini@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 11:28:09 by falberti          #+#    #+#             */
-/*   Updated: 2024/01/19 01:24:52 by albertini        ###   ########.fr       */
+/*   Updated: 2024/01/19 12:04:11 by albertini        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ int					int_repeat(t_stack_node *stack, int nbr);
 // freerers
 void				free_list(char **list);
 void				free_stack(t_stack_node **stack);
+void				mini_error_free();
 
 // commands
 void				pa(t_stack_node **stackdesta, t_stack_node **stacksrcb);

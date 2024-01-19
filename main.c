@@ -6,7 +6,7 @@
 /*   By: albertini <albertini@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 13:25:05 by falberti          #+#    #+#             */
-/*   Updated: 2024/01/19 01:25:09 by albertini        ###   ########.fr       */
+/*   Updated: 2024/01/19 11:21:26 by albertini        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int	main(int ac, char **av)
 			sa(&a);
 		else if (stack_len(a) == 3)
 			tiny_sort(&a);
-		else
+		else if (stack_len(a) >= 4)
 			push_swap(&a, &b);
 	}
 	free_stack(&a);
