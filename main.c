@@ -6,7 +6,7 @@
 /*   By: albertini <albertini@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 13:25:05 by falberti          #+#    #+#             */
-/*   Updated: 2024/01/19 11:21:26 by albertini        ###   ########.fr       */
+/*   Updated: 2024/01/19 16:40:28 by albertini        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,10 @@ int	main(int ac, char **av)
 	splited_list = NULL;
 	if (ac == 1 || (ac == 2 && !av[1][0]))
 		return (1);
-    else if (ac > 2)
-        splited_list = split(str_join((av+1)), ' ');
 	else if (ac == 2)
         splited_list = split(av[1], ' ');
+    else if (ac > 2)
+        splited_list = split(str_join((av+1)), ' ');
     stack_init(&a, splited_list);
 	if (!stack_sorted(a))
 	{
