@@ -6,7 +6,7 @@
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 15:55:01 by falberti          #+#    #+#             */
-/*   Updated: 2024/01/18 16:27:24 by falberti         ###   ########.fr       */
+/*   Updated: 2024/01/23 14:49:03 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static	void	reverse_rotate_both(t_stack_node **a, t_stack_node **b,
 									t_stack_node *cheapest_node)
 {
 	while (a[0] != cheapest_node->target_node && b[0] != cheapest_node)
-		rr(a, b);
+		rrr(a, b);
 	set_current_position(a[0]);
 	set_current_position(b[0]);
 	return ;
