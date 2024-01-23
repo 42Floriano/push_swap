@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
+/*   By: albertini <albertini@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 13:25:05 by falberti          #+#    #+#             */
-/*   Updated: 2024/01/23 17:08:56 by falberti         ###   ########.fr       */
+/*   Updated: 2024/01/23 22:47:31 by albertini        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ int	main(int ac, char **av)
 	a = NULL;
 	b = NULL;
 	splited_list = NULL;
-	if (ac == 1 || (ac == 2 && !av[1][0]))
-		return (1);
+	if (ac == 1 || (ac == 2 && (!av[1][0] || av[1][0] == '\0')))
+		mini_error_free();
 	else if (ac == 2)
 		splited_list = split(av[1], ' ');
 	else if (ac > 2)
@@ -40,8 +40,9 @@ int	main(int ac, char **av)
 			sa(&a);
 		else if (stack_len(a) == 3)
 			tiny_sort(&a);
-		else if (stack_len(a) >= 4)
+		else
 			push_swap(&a, &b);
 	}
 	free_stack(&a);
+    return (0);
 }

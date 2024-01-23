@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_init.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
+/*   By: albertini <albertini@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 14:41:46 by falberti          #+#    #+#             */
-/*   Updated: 2024/01/23 16:11:46 by falberti         ###   ########.fr       */
+/*   Updated: 2024/01/23 22:33:15 by albertini        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ void	set_current_position(t_stack_node *stack)
 	i = 0;
 	if (stack == NULL)
 		return ;
-	middlestack = stack_len(stack) / 2;
+	middlestack = stack_len(stack) / 2; //DEBUG
 	while (stack)
 	{
 		stack->current_position = i;

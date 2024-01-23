@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_commands.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
+/*   By: albertini <albertini@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 15:55:01 by falberti          #+#    #+#             */
-/*   Updated: 2024/01/23 14:49:03 by falberti         ###   ########.fr       */
+/*   Updated: 2024/01/23 22:57:09 by albertini        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,7 @@ void	push_swap(t_stack_node **a, t_stack_node **b)
 		handle_five(a, b);
 	else
 	{
+        len_a += 1; //DEBUG
 		while (len_a-- > 3)
 			pb(b, a);
 	}
@@ -99,9 +100,14 @@ void	push_swap(t_stack_node **a, t_stack_node **b)
 	set_current_position(a[0]);
 	smallest = find_smallest(a[0]);
 	if (smallest->above_median)
-		while (a[0] != smallest)
+    {
+        while (a[0] != smallest)
 			ra(a);
+    }	
 	else
-		while (a[0] != smallest)
+    {
+        while (a[0] != smallest)
 			rra(a);
+    }
+		
 }

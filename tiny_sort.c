@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   tiny_sort.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
+/*   By: albertini <albertini@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 13:07:32 by falberti          #+#    #+#             */
-/*   Updated: 2024/01/23 15:47:44 by falberti         ###   ########.fr       */
+/*   Updated: 2024/01/23 23:08:23 by albertini        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	stack_sorted(t_stack_node *stack)
 {
 	if (stack == NULL)
-		return (0);
+		return (1);
 	while (stack->next)
 	{
 		if (stack->value > stack->next->value)
