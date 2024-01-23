@@ -6,7 +6,7 @@
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 14:57:59 by falberti          #+#    #+#             */
-/*   Updated: 2024/01/18 16:38:41 by falberti         ###   ########.fr       */
+/*   Updated: 2024/01/23 17:01:49 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,11 +88,13 @@ int	stack_len(t_stack_node *list)
 {
 	int	count;
 
+	if (list == NULL)
+		return (0);
 	count = 0;
 	while (list)
 	{
-		list = list->next;
 		count++;
+		list = list->next;
 	}
 	return (count);
 }

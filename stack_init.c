@@ -6,7 +6,7 @@
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 13:53:30 by falberti          #+#    #+#             */
-/*   Updated: 2024/01/18 13:44:03 by falberti         ###   ########.fr       */
+/*   Updated: 2024/01/23 15:55:38 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ void	stack_init(t_stack_node **a, char **list)
 		nbr = ft_atol(list[i]);
 		if (nbr > INT_MAX || nbr < INT_MIN)
 			error_free(a, list);
-		if (int_repeat(*a, nbr))
+		if (int_repeat(*a, (int)nbr))
 			error_free(a, list);
 		append_node(a, (int)nbr);
 		i++;

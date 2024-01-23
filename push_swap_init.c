@@ -6,7 +6,7 @@
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 14:41:46 by falberti          #+#    #+#             */
-/*   Updated: 2024/01/18 16:27:38 by falberti         ###   ########.fr       */
+/*   Updated: 2024/01/23 16:11:46 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void	set_price(t_stack_node *a, t_stack_node *b)
 		b->push_price = b->current_position;
 		if (b->above_median == false)
 			b->push_price = len_b - b->current_position;
-		if (b->above_median == true)
+		if (b->target_node->above_median == true)
 			b->push_price += b->target_node->current_position;
 		else
 			b->push_price += len_a - b->target_node->current_position;
@@ -91,7 +91,7 @@ void	set_current_position(t_stack_node *stack)
 // Sets the cheapest node of stack b
 void	set_cheapest(t_stack_node *b)
 {
-	t_stack_node	*cheapest;
+	t_stack_node	*best_match;
 	long			cheapest_value;
 
 	if (b == NULL)
@@ -101,12 +101,12 @@ void	set_cheapest(t_stack_node *b)
 	{
 		if (b->push_price < cheapest_value)
 		{
-			cheapest = b;
+			best_match = b;
 			cheapest_value = b->push_price;
 		}
 		b = b->next;
 	}
-	cheapest->cheapest = true;
+	best_match->cheapest = true;
 	return ;
 }
 

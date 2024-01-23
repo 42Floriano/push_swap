@@ -6,7 +6,7 @@
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 13:07:32 by falberti          #+#    #+#             */
-/*   Updated: 2024/01/18 16:39:22 by falberti         ###   ########.fr       */
+/*   Updated: 2024/01/23 15:47:44 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	stack_sorted(t_stack_node *stack)
 		return (0);
 	while (stack->next)
 	{
-		if (stack->value >= stack->next->value)
+		if (stack->value > stack->next->value)
 			return (0);
 		stack = stack->next;
 	}
@@ -28,11 +28,11 @@ int	stack_sorted(t_stack_node *stack)
 static t_stack_node	*find_highest(t_stack_node *stack)
 {
 	t_stack_node	*highest_node;
-	long			highest;
+	int			highest;
 
 	if (stack == NULL)
 		return (NULL);
-	highest = LONG_MIN;
+	highest = INT_MIN;
 	while (stack)
 	{
 		if (stack->value > highest)

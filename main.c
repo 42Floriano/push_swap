@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albertini <albertini@student.42.fr>        +#+  +:+       +#+        */
+/*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 13:25:05 by falberti          #+#    #+#             */
-/*   Updated: 2024/01/19 17:11:36 by albertini        ###   ########.fr       */
+/*   Updated: 2024/01/23 17:08:56 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,10 @@ int	main(int ac, char **av)
 	if (ac == 1 || (ac == 2 && !av[1][0]))
 		return (1);
 	else if (ac == 2)
-        splited_list = split(av[1], ' ');
-    else if (ac > 2)
-        splited_list = split(str_join((av+1)), ' ');
-    stack_init(&a, splited_list);
+		splited_list = split(av[1], ' ');
+	else if (ac > 2)
+		splited_list = split(str_join((av+1)), ' ');
+	stack_init(&a, splited_list);
 	if (!stack_sorted(a))
 	{
 		if (stack_len(a) == 2)
