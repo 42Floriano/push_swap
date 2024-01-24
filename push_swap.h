@@ -6,7 +6,7 @@
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 11:28:09 by falberti          #+#    #+#             */
-/*   Updated: 2024/01/23 15:38:00 by falberti         ###   ########.fr       */
+/*   Updated: 2024/01/24 13:26:07 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ typedef struct s_stack_node
 }					t_stack_node;
 
 // split function
-char				**split(char *str, char sep);
+char				**split(char *str, char sep, bool is_av);
 
 // stack_init
 void				stack_init(t_stack_node **a, char **list);

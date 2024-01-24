@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   split.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albertini <albertini@student.42.fr>        +#+  +:+       +#+        */
+/*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 15:15:49 by falberti          #+#    #+#             */
-/*   Updated: 2024/01/23 22:45:39 by albertini        ###   ########.fr       */
+/*   Updated: 2024/01/24 13:27:04 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ static char	*get_next_word(char *str, char sep)
  * Split the string using the seperator recieved into a list of string.
  * Returns the **list
 */
-char	**split(char *str, char sep)
+char	**split(char *str, char sep, bool is_av)
 {
 	int		i;
 	int		len;
@@ -74,5 +74,7 @@ char	**split(char *str, char sep)
 	while (len-- > 0)
 		list[i++] = get_next_word(str, sep);
 	list[i] = NULL;
+	if (!(is_av))
+		free(str);
 	return (list);
 }
