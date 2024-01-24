@@ -62,4 +62,5 @@ pa
 pa
 pa
 ```
+![MV5BYTZjZDVkMjAtY2I0NS00YzZhLWFkNzAtMzdhYWUyNWE5MWE3XkEyXkFqcGdeQXVyNjczOTE0MzM@ _V1_](https://github.com/42Floriano/push_swap/assets/56269861/2d8e0a6e-18f8-4999-a3ed-e49c66225793)
 
