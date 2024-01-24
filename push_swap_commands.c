@@ -6,7 +6,7 @@
 /*   By: albertini <albertini@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 15:55:01 by falberti          #+#    #+#             */
-/*   Updated: 2024/01/23 22:57:09 by albertini        ###   ########.fr       */
+/*   Updated: 2024/01/24 10:22:52 by albertini        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,11 +86,8 @@ void	push_swap(t_stack_node **a, t_stack_node **b)
 	if (len_a == 5)
 		handle_five(a, b);
 	else
-	{
-        len_a += 1; //DEBUG
-		while (len_a-- > 3)
+		while (len_a-- >= 3)
 			pb(b, a);
-	}
 	tiny_sort(a);
 	while (b[0])
 	{
